@@ -5,6 +5,7 @@ import cors from "cors";
 import UserModel from "./Models/UserModel.js";
 import bcrypt from "bcrypt";
 import PostModel from "./Models/Posts.js";
+import * as ENV from "./config.js";
 
 const app = express();
 
@@ -12,8 +13,9 @@ app.use(express.json());
 app.use(cors());
 
 //db connection
-const connectString =
-  "mongodb+srv://user123:user123@postitcluster.rwtav.mongodb.net/postITDb?retryWrites=true&w=majority&appName=PostITCluster";
+//const connectString = "mongodb+srv://user123:user123@postitcluster.rwtav.mongodb.net/postITDb?retryWrites=true&w=majority&appName=PostITCluster";
+
+const connectString = `mongodb+srv://${ENV.DB_USER}:${ENV.DB_PASSWORD}@${ENV.DB_CLUSTER}/${ENV.DB_NAME}?retryWrites=true&w=majority&appName=PostITCluster`;
 
 //mongodb+srv://sem120242025:<db_password>@postitcluster.gsgf6.mongodb.net/?retryWrites=true&w=majority&appName=PostITCluster
 //mongodb+srv://sem120242025:<db_password>@postitcluster.gsgf6.mongodb.net/?retryWrites=true&w=majority&appName=PostITCluster
@@ -97,6 +99,8 @@ app.get("/getPosts", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("You are connected!");
+const port = ENV.PORT || 3001;
+
+app.listen(port, () => {
+  console.log(`You are connected at port: ${port}`);
 });
