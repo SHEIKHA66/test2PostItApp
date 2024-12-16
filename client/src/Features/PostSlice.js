@@ -69,4 +69,22 @@ export const getPosts = createAsyncThunk("post/getPosts", async () => {
   }
 });
 
+//..
+
+export const likePost = createAsyncThunk("posts/likePost", async (postData) => {
+  try {
+    //Pass along the URL the postId
+    const response = await axios.put(
+      `http://localhost:3001/likePost/${postData.postId}`,
+      {
+        userId: postData.userId,
+      }
+    );
+    const post = response.data.post;
+    return post;
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 export default postSlice.reducer;
