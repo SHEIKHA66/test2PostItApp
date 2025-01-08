@@ -90,6 +90,20 @@ const Login = () => {
 
 
 
+<p>df=pd.read_csv(اسم الداتا.csv') </p>
+<p>df.head()</p>
+
+<p>label_encoder = LabelEncoder()</p>
+<p>df.variety = label_encoder.fit_transform(df.اسم اخر كولوم) </p>
+
+<p>x=df[['اسماء الكولوم كلهن عدا اخر واحد" ]]</p> 
+<p>y=df['اسم اخر كولوم']df</p>
+
+
+
+<p>X_train, X_test, y_train, y_test = train_test_split(x, y,  test_size=0.3, random_state=42)</p>
+
+
 
 
 
