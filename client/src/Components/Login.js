@@ -130,6 +130,23 @@ const Login = () => {
 <p>print(class_report)</p>
 
 
+         <p># Define the parameter grid for GridSearchCV</p>
+
+<p>param_grid = {</p>
+<p>'n_neighbors': [3, 5, 7, 9, 11], </p>
+ <p>'metric': ['euclidean', 'manhattan', 'minkowski'],</p>
+ <p>'weights': ['uniform', 'distance']}</p> 
+ 
+<p># Initialize the KNN classifier</p>
+<p>model = KNeighborsClassifier()</p>
+
+
+<p># Perform GridSearchCV with cross-validation</p>
+<p>grid_search = GridSearchCV(model, param_grid, cv=5, scoring='accuracy', verbose=1) </p>
+<p>grid_search.fit(X_train, y_train)</p>
+
+
+
     </td>
 
     </tbody>
