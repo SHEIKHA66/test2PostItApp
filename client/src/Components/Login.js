@@ -261,6 +261,79 @@ const Login = () => {
 <p>plt.grid()</p>
 <p>plt.show()</p>
 
+
+  <p>#knn::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;</p>
+   <p>   # Load the Iris dataset</p>
+<p>iris = datasets.load_iris()</p>
+<p># Create a DataFrame for the dataset</p>
+<p>iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)</p>
+<p>iris_df['target'] = iris.target</p>
+<p># Simple train/test split of the dataset</p>
+<p>(iris_train_ftrs, iris_test_ftrs, iris_train_tgt, iris_test_tgt) = skms.train_test_split(iris.data, iris.target, test_size=.25)</p>
+<p># Print the shapes of the training and testing sets
+<p>print("Train features shape:", iris_train_ftrs.shape)</p>
+<p>print("Test features shape:", iris_test_ftrs.shape)</p>
+<p>knn = neighbors.KNeighborsClassifier(n_neighbors=3)</p>
+<p>fit = knn.fit(iris_train_ftrs, iris_train_tgt)</p>
+<p>preds = fit.predict(iris_test_ftrs)</p>
+<p>print("3NN accuracy:", metrics.accuracy_score(iris_test_tgt, preds))</p>
+      
+      
+<p>#Linear Regression::::::::::::::::::::::::::::::::::::::::::::::::</p>
+    
+
+
+<p># Step 2: Load Data</p>
+<p># Sample data: Hours studied vs Exam scores</p>
+<p>data = </p>
+    <p>'Hours_Studied': [2, 3, 4, 5],</p>
+    <p>'Exam_Score': [60, 70, 80, 85]</p>
+<p>}</p>
+<p>df = pd.DataFrame(data)</p>
+
+<p># Step 3: Extracting Features and Target Variable</p>
+<p>X = df[['Hours_Studied']]</p>
+<p>y = df['Exam_Score']</p>
+
+<p># Creating a Linear Regression model</p>
+<p>model = LinearRegression()</p>
+
+<p># Fitting the model on the training data</p>
+<p>model.fit(X, y)</p>
+
+<p># Step 5: Understanding and Displaying Coefficients</p>
+<p>print("Intercept:", model.intercept_)</p>
+<p>print("Coefficient:", model.coef_)</p>
+
+<p># Step 6: Making Predictions on Existing Data</p>
+<p>y_pred = model.predict(X)</p>
+
+<p># Step 7: Evaluating Model Performance</p>
+<p>sse = ((y - y_pred) ** 2).sum()</p>
+<p>print('Sum of Squared Error:', sse)</p>
+
+<p># Step 8: Making Predictions for New Data</p>
+<p>new_data = pd.DataFrame({</p>
+   <p> 'Hours_Studied': [2.5, 3.5, 4.5, 5.5]})</p>
+
+<p>predicted_score = model.predict(new_data)</p>
+<p>print('Predicted Exam Score:', predicted_score)</p>
+
+<p># Step 9: Visualizing Results</p>
+<p>plt.figure(figsize=(10, 6))</p>
+
+<p># Plotting the training data points</p>
+<p>plt.scatter(X, y, color='blue', label='Training Data')</p>
+
+<p># Plotting the regression line</p>
+<p>plt.plot(X, y_pred, color='red', label='Regression Line')</p>
+
+<p>plt.title("Linear Regression: Hours Studied vs Exam Score")</p>
+<p>plt.xlabel("Hours Studied")</p>
+<p>plt.ylabel("Exam Score")</p>
+<p>plt.legend()</p>
+<p>plt.show()</p>
+
       
 
     </td>
