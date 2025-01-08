@@ -65,39 +65,40 @@ const Login = () => {
     <tbody>
     
     <td>
-from sklearn.preprocessing import LabelEncoder
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+<p>from sklearn.preprocessing import LabelEncoder</p>
+<p>from sklearn.neighbors import KNeighborsClassifier</p>
+<p>from sklearn.metrics import accuracy_score, classification_report, confusion_matrix</p>
 
 
-from sklearn.datasets import fetch_california_housing
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.svm import SVR
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import mean_squared_error, r2_score
-
-
-
-import pandas as pd
-import numpy as np
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier,plot_tree
-from sklearn.metrics import classification_report,confusion_matrix
-from sklearn.model_selection import train_test_split,cross_val_score
-
-import numpy as np
-from sklearn.cluster import KMeans
-import pandas as pd
-import matplotlib.pyplot as plt
+<p>from sklearn.datasets import fetch_california_housing</p>
+<p>from sklearn.model_selection import train_test_split, GridSearchCV</p>
+<p>from sklearn.svm import SVR</p>
+<p>from sklearn.preprocessing import StandardScaler</p>
+<p>from sklearn.metrics import mean_squared_error, r2_score</p>
 
 
 
+<p>import pandas as pd</p>
+<p>import numpy as np</p>
 
-import matplotlib.pyplot as plt
+<p>from sklearn.linear_model import LogisticRegression</p>
+<p>from sklearn.tree import DecisionTreeClassifier,plot_tree</p>
+<p>from sklearn.metrics import classification_report,confusion_matrix</p>
+<p>from sklearn.model_selection import train_test_split,cross_val_score</p>
+
+<p>import numpy as np</p>
+<p>from sklearn.cluster import KMeans</p>
+<p>import pandas as pd</p>
+<p>import matplotlib.pyplot as plt</p>
+  <p>from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix</p>
 
 
-import seaborn as sns
+
+
+<p>import matplotlib.pyplot as plt</p>
+
+
+<p>import seaborn as sns</p>
     
     </td>
     </tbody>
