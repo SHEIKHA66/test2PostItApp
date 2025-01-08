@@ -133,6 +133,8 @@ const Login = () => {
        
 <p># Define the parameter grid for GridSearchCV</p>
 
+ <p>param_grid = {</p>
+
 
 
     </td>
