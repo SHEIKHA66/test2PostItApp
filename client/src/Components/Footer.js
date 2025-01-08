@@ -1,9 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div>©2023.PostIT. All Rights Reserved. - another update here </div>
+    <footer>
+      <div> </div>
     </footer>
   );
 };
 
+
+
+
 export default Footer;
+// className="footer"
+//©2023.PostIT. All Rights Reserved. - another update here
