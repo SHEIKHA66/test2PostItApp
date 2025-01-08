@@ -6,6 +6,7 @@ import { Container, Row, Col, Form } from "reactstrap";
 import { Button, Label, FormGroup, Input } from "reactstrap";
 import { Link } from "react-router-dom";
 
+
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -53,7 +54,20 @@ const Login = () => {
           </Row>
 
           <Row>
-            <Col md={3}>
+            <Col>
+    ddsdasdfasgdf
+    </Col>
+          </Row>
+        </Form>
+      </Container>
+    </div>
+  );
+};
+
+export default Login;
+
+/*
+<Col md={3}>
               <FormGroup>
                 <Label for="eMail">Email</Label>
                 <Input
@@ -95,11 +109,5 @@ const Login = () => {
                 No Account? <Link to="/register">Sign Up</Link>
               </p>
             </Col>
-          </Row>
-        </Form>
-      </Container>
-    </div>
-  );
-};
 
-export default Login;
+*/
