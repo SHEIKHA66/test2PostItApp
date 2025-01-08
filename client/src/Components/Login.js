@@ -291,8 +291,137 @@ const Login = () => {
 <p>import matplotlib.pyplot as plt;</p> 
 <p>import seaborn as sns;</p>
 <p>sns.heatmap(conf_matrix, annot=True); plt.show()</p>
-  
 
+  <p>#Evl.</p>
+
+
+<p>from sklearn.datasets import load_iris</p>
+<p>from sklearn.model_selection import train_test_split</p>
+<p>from sklearn.ensemble import RandomForestClassifier</p>
+<p>from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix</p>
+
+<p># Load dataset</p>
+<p>data = load_iris()</p>
+<p>X, y = data.data, data.target</p>
+
+<p># Split the dataset into training and testing sets (70%-30%)</p>
+<p>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)</p>
+
+<p># Train the model</p>
+<p>model = RandomForestClassifier()</p>
+<p>model.fit(X_train, y_train)</p>
+
+<p># Make predictions and evaluate</p>
+<p>y_pred = model.predict(X_test)</p>
+
+<p># Accuracy</p>
+<p>score = accuracy_score(y_test, y_pred) * 100</p>
+<p>print('Accuracy:', score)</p>
+
+<p># Confusion Matrix and Classification Report</p>
+<p>conf_matrix = confusion_matrix(y_test, y_pred)</p>
+<p>class_report = classification_report(y_test, y_pred)</p>
+
+<p>print("Confusion Matrix:")</p>
+<p>print(conf_matrix)</p>
+<p>print("\nClassification Report:")</p>
+<p>print(class_report)</p>
+
+
+
+<p>from sklearn.datasets import load_iris</p>
+<p>from sklearn.model_selection import LeaveOneOut</p>
+<p>from sklearn.ensemble import RandomForestClassifier</p>
+<p>from sklearn.metrics import accuracy_score</p>
+
+<p># Load dataset</p>
+<p>data = load_iris()</p>
+<p>X, y = data.data, data.target</p>
+
+<p># Initialize LOOCV</p>
+<p>loo = LeaveOneOut()</p>
+<p>model = RandomForestClassifier()</p>
+<p>accuracies = []</p>
+<p>i = 1</p>
+
+<p># Perform LOOCV</p>
+<p>for train_index, test_index in loo.split(X):</p>
+   <p> print("Iteration :", i)</p>
+    <p>i = i + 1</p>
+
+    <p># Split the data into training and testing sets</p>
+    <p>X_train, X_test = X[train_index], X[test_index]</p>
+    <p>y_train, y_test = y[train_index], y[test_index]</p>
+
+    <p># Train the model</p>
+    <p>model.fit(X_train, y_train)</p>
+
+    <p># Test the model</p>
+   <p> y_pred = model.predict(X_test)</p>
+
+    <p># Calculate accuracy for the current iteration</p>
+    <p>accuracy = accuracy_score(y_test, y_pred)</p>
+   <p> accuracies.append(accuracy)</p>
+
+<p># Calculate and print the average accuracy</p>
+<p>average_accuracy = sum(accuracies) / len(accuracies)</p>
+<p>print(f"Average Accuracy with LOOCV: average_accuracy:.2f")</p>
+
+
+<p>from sklearn.model_selection import KFold, cross_val_score</p>
+<p>from sklearn.ensemble import RandomForestClassifier</p>
+<p>from sklearn.datasets import load_iris</p>
+
+<p># Load dataset</p>
+<p>data = load_iris()</p>
+<p>X, y = data.data, data.target</p>
+
+<p># Set up K-Fold Cross-Validation with 10 folds</p>
+<p>kf = KFold(n_splits=10, shuffle=True, random_state=42)</p>
+<p>model = RandomForestClassifier()</p>
+
+<p># Perform cross-validation</p>
+<p>scores = cross_val_score(model, X, y, cv=kf)</p>
+
+<p># Print results</p>
+<p>print('Cross-Validation Scores:', scores * 100)</p>
+<p>print('Average Accuracy:', scores.mean() * 100)</p>
+
+
+<p>import numpy as np</p>
+<p>from sklearn.utils import resample</p>
+<p>from sklearn.ensemble import RandomForestClassifier</p>
+<p>from sklearn.metrics import accuracy_score</p>
+<p>from sklearn.datasets import load_iris</p>
+<p>from sklearn.model_selection import train_test_split</p>
+
+<p># Load dataset</p>
+<p>data = load_iris()</p>
+<p>X, y = data.data, data.target</p>
+
+<p># Generate bootstrap samples</p>
+<p>n_iterations = 10</p>
+<p>bootstrapped_accuracies = []</p>
+
+<p>for i in range(n_iterations):</p>
+   <p> # Create a bootstrap sample</p>
+    <p>X_resampled, y_resampled = resample(X, y, random_state=i)</p>
+    <p>X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.3)</p>
+    
+    <p># Train and evaluate model</p>
+    <p>model = RandomForestClassifier()</p>
+    <p>model.fit(X_train, y_train)</p>
+    <p>y_pred = model.predict(X_test)</p>
+    
+    <p># Calculate accuracy</p>
+    <p>accuracy = accuracy_score(y_test, y_pred)</p>
+    <p>bootstrapped_accuracies.append(accuracy)</p>
+
+<p># Calculate and print the average accuracy</p>
+<p>print(f"Average Accuracy with Bootstrap Sampling: {np.mean(bootstrapped_accuracies):.2f}")</p>
+
+
+  
     </td>
 
     </tbody>
