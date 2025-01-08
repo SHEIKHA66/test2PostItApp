@@ -169,6 +169,49 @@ const Login = () => {
 <p>model = DecisionTreeClassifier()</p>
 
 
+  <p>#svr::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</p>
+      
+<p># Load the external dataset (California Housing dataset)</p>
+<p>data = fetch_california_housing()</p>
+<p>X = data.data </p>
+<p>y = data.target </p>
+
+<p># Preprocess the data (standardize features)</p>
+<p>scaler = StandardScaler() </p>
+<p>X_scaled = scaler.fit_transform(X)</p>
+
+<p># Split the data into training and testing sets</p>
+<p>X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, random_state=42)</p>
+
+<p># Define the parameter grid for GridSearchCV</p>
+<p>param_grid = </p>
+ <p>'kernel': ['linear', 'rbf', 'poly'], # Kernel types</p>
+ <p>'C': [0.1, 1, 10, 100], # Regularization parameter</p>
+ <p>'epsilon': [0.01, 0.1, 0],</p>
+<p> 'gamma': ['scale', 'auto'], # Kernel coefficient for RBF and poly</p>
+<p> 'degree': [2, 3, 4] # Degree for polynomial kernel (only for 'poly')</p>
+<p></p>
+
+<p># Initialize the SVR model</p>
+<p>svr = SVR()</p>
+
+<p># Perform GridSearchCV with cross-validation</p>
+<p>grid_search = GridSearchCV(svr, param_grid, cv=5,scoring='neg_mean_squared_error',verbose=1)</p>
+<p>grid_search.fit(X_train, y_train)</p>
+
+<p># Evaluate the model with the best parameters on the test set</p>
+
+<p>best_svr = grid_search.best_estimator_</p>
+<p>y_pred = best_svr.predict(X_test)</p>
+             
+<p># Print evaluation metrics</p>
+<p>mse = mean_squared_error(y_test, y_pred)</p>
+<p>r2 = r2_score(y_test, y_pred)</p>
+<p>print("\nTest Set Mean Squared Error (MSE):", mse)</p>
+<p>print("Test Set R-squared (R2):", r2)</p>
+      
+
+
     </td>
 
     </tbody>
