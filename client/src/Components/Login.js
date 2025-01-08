@@ -285,6 +285,12 @@ const Login = () => {
 <p>plt.legend()</p>
 <p>plt.show()</p>
 
+
+  <p>#:::::::::::::::::::::::::::::::::</p>
+<p>  #create heatmap    </p>
+<p>import matplotlib.pyplot as plt;</p> 
+<p>import seaborn as sns;</p>
+<p>sns.heatmap(conf_matrix, annot=True); plt.show()</p>
   
 
     </td>
