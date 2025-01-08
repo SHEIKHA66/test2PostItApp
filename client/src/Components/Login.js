@@ -146,7 +146,27 @@ const Login = () => {
 <p>grid_search = GridSearchCV(model, param_grid, cv=5, scoring='accuracy', verbose=1) </p>
 <p>grid_search.fit(X_train, y_train)</p>
 
+<p># Display the best parameters and score from the grid search</p>
+<p>print("Best Parameters:", grid_search.best_params_)</p>
+<p>print("Best Cross-Validation Accuracy:", grid_search.best_score_)</p>
 
+
+<p># Define the parameter grid for GridSearchCV</p>
+<p>param_grid =  </p>
+<p>'penalty': ['l1', 'l2', 'elasticnet', None]  </p>
+
+<p># Initialize the KNN classifier</p>
+<p>model = LogisticRegression()</p>
+
+
+
+<p># Define the parameter grid for GridSearchCV</p>
+<p>param_grid =  </p>
+ <p>'criterion': ['gini', 'entropy', 'log_loss'],</p>
+<p>'splitter' : ['best', 'random']  </p>
+<p></p>
+<p># Initialize the DT classifier</p>
+<p>model = DecisionTreeClassifier()</p>
 
 
     </td>
