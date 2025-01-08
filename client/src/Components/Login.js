@@ -116,6 +116,20 @@ const Login = () => {
 <p>pred=model.predict(X_test)</p>
 
 
+         
+<p>#Accuracy</p>
+<p>score = accuracy_score(y_test, pred)*100</p>
+<p>score</p>
+
+<p># Confusion Matrix and Classification Report</p>
+<p>conf_matrix = confusion_matrix(y_test, pred)</p>
+<p>class_report = classification_report(y_test, pred)</p>
+<p>print("Confusion Matrix:")</p>
+<p>print(conf_matrix)</p>
+<p>print("\nClassification Report:")</p>
+<p>print(class_report)</p>
+
+
     </td>
 
     </tbody>
