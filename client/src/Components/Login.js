@@ -133,10 +133,7 @@ const Login = () => {
        
 <p># Define the parameter grid for GridSearchCV</p>
 
-<p>param_grid = {</p>
-<p>'n_neighbors': [3, 5, 7, 9, 11], </p>
- <p>'metric': ['euclidean', 'manhattan', 'minkowski'],</p>
- <p>'weights': ['uniform', 'distance']}</p> 
+
 
     </td>
 
