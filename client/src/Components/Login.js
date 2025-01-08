@@ -264,8 +264,8 @@ const Login = () => {
 <p>print('Sum of Squared Error:', sse)</p>
 
 <p># Step 8: Making Predictions for New Data</p>
-<p>new_data = pd.DataFrame({</p>
-   <p> 'Hours_Studied': [2.5, 3.5, 4.5, 5.5]})</p>
+<p>new_data = pd.DataFrame(كرلي</p>
+   <p> 'Hours_Studied': [2.5, 3.5, 4.5, 5.5]كرلي)</p>
 
 <p>predicted_score = model.predict(new_data)</p>
 <p>print('Predicted Exam Score:', predicted_score)</p>
