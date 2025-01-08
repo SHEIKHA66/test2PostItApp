@@ -210,7 +210,58 @@ const Login = () => {
 <p>print("\nTest Set Mean Squared Error (MSE):", mse)</p>
 <p>print("Test Set R-squared (R2):", r2)</p>
       
+<p>#Kmean::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</p>
+      
+<p># Define the dataset</p>
+<p>data = </p>
+<p>'Point': ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15'],</p>
+<p>'X': [2, 2, 11, 6, 6, 1, 5, 4, 10, 7, 9, 4, 3, 3, 6],</p>
+<p>'Y': [10, 6, 11, 9, 4, 2, 10, 9, 12, 5, 11, 6, 10, 8, 11]</p>
+<p></p>
+<p># Create a DataFrame</p>
+<p>df = pd.DataFrame(data)</p>
+<p># Extract feature values (X and Y coordinates)</p>
+<p>X = df[['X', 'Y']].values</p>
+<p># Define the number of clusters</p>
+<p>n_clusters = 3</p>
+<p># Initialize and fit the K-Means model</p>
+<p>kmeans = KMeans(n_clusters=n_clusters, init=np.array([[2, 10], [11, 11], [6, 4]]), n_init=1, random_state=42)</p>
+<p>kmeans.fit(X)</p>
+<p># Get cluster assignments and centroids</p>
+<p>df['Cluster'] = kmeans.labels_</p>
+<p>centroids = kmeans.cluster_centers_</p>
+<p># Display the results</p>
+<p>print("Final Cluster Assignments:")</p>
+<p>print(df)</p>
+<p>print("\nFinal Centroids:")</p>
+<p>for i, centroid in enumerate(centroids):</p>
+<p>print(f"Cluster i + 1 Centroid: centroid")</p>
+<p># Visualization</p>
+<p>plt.figure(figsize=(8, 6))</p>
+<p># Scatter plot of data points</p>
+<p>colors = ['red', 'blue', 'green']</p>
+      
+<p>for i in range(n_clusters):</p>
+   <p> cluster_points = df[df['Cluster'] == i]</p>
+    <p>plt.scatter(cluster_points['X'],cluster_points['Y'],color=colors[i],label=f'Cluster i + 1's=100)</p>
 
+<p># Plot centroids</p>
+<p>for i, centroid in enumerate(centroids): </p>
+   <p>   plt.scatter(centroid[0],centroid[1],color='black',marker='x',s=200,label=f'Centroid i + 1')</p>
+
+<p># Annotate data points</p>
+<p>for idx, row in df.iterrows():</p>
+      <p>plt.text( row['X'] + 0.2,row['Y'] + 0.2,row['Point'],fontsize=9)</p>
+
+<p># Plot settings</p>
+<p>plt.title('K-Means Clustering Visualization', fontsize=16)</p>
+<p>plt.xlabel('X Coordinate', fontsize=12)</p>
+<p>plt.ylabel('Y Coordinate', fontsize=12)</p>
+<p>plt.legend()</p>
+<p>plt.grid()</p>
+<p>plt.show()</p>
+
+      
 
     </td>
 
