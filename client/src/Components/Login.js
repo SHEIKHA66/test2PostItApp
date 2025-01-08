@@ -99,30 +99,30 @@ const Login = () => {
 
 
 <p>import seaborn as sns</p>
-    
+  <p>.......</p>
+
+
+
+  
+  
+  <p>model=KNeighborsClassifier(n_neighbors=7,metric='euclidean',weights='uniform' )</p>
+<p>model.fit(X_train, y_train)</p>
+
+<p>pred=model.predict(X_test)</p>
+
+<p>#Accuracy</p>
+<p>score = accuracy_score(y_test, pred)*100</p>
+<p>score</p>
+
+<p>conf_matrix = confusion_matrix(y_test, pred)</p>
+<p>class_report = classification_report(y_test, pred)</p>
+<p>print("Confusion Matrix:")</p>
+<p>print(conf_matrix)</p>
+<p>print("\nClassification Report:")</p>
+<p>print(class_report)</p>
+  
     </td>
 
-  <td>
-  
-  <p>
-  model=KNeighborsClassifier(n_neighbors=7,metric='euclidean',weights='uniform' )
-model.fit(X_train, y_train)
-
-pred=model.predict(X_test)
-
-#Accuracy
-score = accuracy_score(y_test, pred)*100
-score
-
-conf_matrix = confusion_matrix(y_test, pred)
-class_report = classification_report(y_test, pred)
-print("Confusion Matrix:")
-print(conf_matrix)
-print("\nClassification Report:")
-print(class_report)
-  
-  </p>
-  </td>
     </tbody>
     </table>
     </Col>
