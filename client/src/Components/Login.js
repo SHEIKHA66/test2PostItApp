@@ -237,7 +237,7 @@ const Login = () => {
 <p>data = </p>
     <p>'Hours_Studied': [2, 3, 4, 5],</p>
     <p>'Exam_Score': [60, 70, 80, 85]</p>
-<p>}</p>
+<p></p>
 <p>df = pd.DataFrame(data)</p>
 
 <p># Step 3: Extracting Features and Target Variable</p>
