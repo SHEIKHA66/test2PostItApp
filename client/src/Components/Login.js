@@ -210,59 +210,7 @@ const Login = () => {
 <p>print("\nTest Set Mean Squared Error (MSE):", mse)</p>
 <p>print("Test Set R-squared (R2):", r2)</p>
       
-<p>#Kmean::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</p>
-      
-<p># Define the dataset</p>
-<p>data = </p>
-<p>'Point': ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15'],</p>
-<p>'X': [2, 2, 11, 6, 6, 1, 5, 4, 10, 7, 9, 4, 3, 3, 6],</p>
-<p>'Y': [10, 6, 11, 9, 4, 2, 10, 9, 12, 5, 11, 6, 10, 8, 11]</p>
-<p></p>
-<p># Create a DataFrame</p>
-<p>df = pd.DataFrame(data)</p>
-<p># Extract feature values (X and Y coordinates)</p>
-<p>X = df[['X', 'Y']].values</p>
-<p># Define the number of clusters</p>
-<p>n_clusters = 3</p>
-<p># Initialize and fit the K-Means model</p>
-<p>kmeans = KMeans(n_clusters=n_clusters, init=np.array([[2, 10], [11, 11], [6, 4]]), n_init=1, random_state=42)</p>
-<p>kmeans.fit(X)</p>
-<p># Get cluster assignments and centroids</p>
-<p>df['Cluster'] = kmeans.labels_</p>
-<p>centroids = kmeans.cluster_centers_</p>
-<p># Display the results</p>
-<p>print("Final Cluster Assignments:")</p>
-<p>print(df)</p>
-<p>print("\nFinal Centroids:")</p>
-<p>for i, centroid in enumerate(centroids):</p>
-<p>print(f"Cluster i + 1 Centroid: centroid")</p>
-<p># Visualization</p>
-<p>plt.figure(figsize=(8, 6))</p>
-<p># Scatter plot of data points</p>
-<p>colors = ['red', 'blue', 'green']</p>
-      
-<p>for i in range(n_clusters):</p>
-   <p> cluster_points = df[df['Cluster'] == i]</p>
-    <p>plt.scatter(cluster_points['X'],cluster_points['Y'],color=colors[i],label=f'Cluster i + 1's=100)</p>
-
-<p># Plot centroids</p>
-<p>for i, centroid in enumerate(centroids): </p>
-   <p>   plt.scatter(centroid[0],centroid[1],color='black',marker='x',s=200,label=f'Centroid i + 1')</p>
-
-<p># Annotate data points</p>
-<p>for idx, row in df.iterrows():</p>
-      <p>plt.text( row['X'] + 0.2,row['Y'] + 0.2,row['Point'],fontsize=9)</p>
-
-<p># Plot settings</p>
-<p>plt.title('K-Means Clustering Visualization', fontsize=16)</p>
-<p>plt.xlabel('X Coordinate', fontsize=12)</p>
-<p>plt.ylabel('Y Coordinate', fontsize=12)</p>
-<p>plt.legend()</p>
-<p>plt.grid()</p>
-<p>plt.show()</p>
-
-
-  <p>#knn::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;</p>
+<p>#knn::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;</p>
    <p>   # Load the Iris dataset</p>
 <p>iris = datasets.load_iris()</p>
 <p># Create a DataFrame for the dataset</p>
@@ -277,64 +225,6 @@ const Login = () => {
 <p>fit = knn.fit(iris_train_ftrs, iris_train_tgt)</p>
 <p>preds = fit.predict(iris_test_ftrs)</p>
 <p>print("3NN accuracy:", metrics.accuracy_score(iris_test_tgt, preds))</p>
-      
-      
-<p>#Linear Regression::::::::::::::::::::::::::::::::::::::::::::::::</p>
-    
-
-
-<p># Step 2: Load Data</p>
-<p># Sample data: Hours studied vs Exam scores</p>
-<p>data = </p>
-    <p>'Hours_Studied': [2, 3, 4, 5],</p>
-    <p>'Exam_Score': [60, 70, 80, 85]</p>
-<p>}</p>
-<p>df = pd.DataFrame(data)</p>
-
-<p># Step 3: Extracting Features and Target Variable</p>
-<p>X = df[['Hours_Studied']]</p>
-<p>y = df['Exam_Score']</p>
-
-<p># Creating a Linear Regression model</p>
-<p>model = LinearRegression()</p>
-
-<p># Fitting the model on the training data</p>
-<p>model.fit(X, y)</p>
-
-<p># Step 5: Understanding and Displaying Coefficients</p>
-<p>print("Intercept:", model.intercept_)</p>
-<p>print("Coefficient:", model.coef_)</p>
-
-<p># Step 6: Making Predictions on Existing Data</p>
-<p>y_pred = model.predict(X)</p>
-
-<p># Step 7: Evaluating Model Performance</p>
-<p>sse = ((y - y_pred) ** 2).sum()</p>
-<p>print('Sum of Squared Error:', sse)</p>
-
-<p># Step 8: Making Predictions for New Data</p>
-<p>new_data = pd.DataFrame({</p>
-   <p> 'Hours_Studied': [2.5, 3.5, 4.5, 5.5]})</p>
-
-<p>predicted_score = model.predict(new_data)</p>
-<p>print('Predicted Exam Score:', predicted_score)</p>
-
-<p># Step 9: Visualizing Results</p>
-<p>plt.figure(figsize=(10, 6))</p>
-
-<p># Plotting the training data points</p>
-<p>plt.scatter(X, y, color='blue', label='Training Data')</p>
-
-<p># Plotting the regression line</p>
-<p>plt.plot(X, y_pred, color='red', label='Regression Line')</p>
-
-<p>plt.title("Linear Regression: Hours Studied vs Exam Score")</p>
-<p>plt.xlabel("Hours Studied")</p>
-<p>plt.ylabel("Exam Score")</p>
-<p>plt.legend()</p>
-<p>plt.show()</p>
-
-      
 
     </td>
 
