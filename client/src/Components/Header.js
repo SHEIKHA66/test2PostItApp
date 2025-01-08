@@ -20,7 +20,18 @@ const Header = () => {
 
   return (
     <>
-      <Navbar className="header">
+     
+    </>
+  );
+};
+
+export default Header;
+
+
+
+/*
+
+ <Navbar className="header">
         <Nav>
           <NavItem>
             <img src={logo} className="logo" />
@@ -42,8 +53,5 @@ const Header = () => {
           </NavItem>
         </Nav>
       </Navbar>
-    </>
-  );
-};
 
-export default Header;
+*/
