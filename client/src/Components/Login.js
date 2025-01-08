@@ -65,7 +65,39 @@ const Login = () => {
     <tbody>
     
     <td>
-rrr
+from sklearn.preprocessing import LabelEncoder
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+
+from sklearn.datasets import fetch_california_housing
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.svm import SVR
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error, r2_score
+
+
+
+import pandas as pd
+import numpy as np
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier,plot_tree
+from sklearn.metrics import classification_report,confusion_matrix
+from sklearn.model_selection import train_test_split,cross_val_score
+
+import numpy as np
+from sklearn.cluster import KMeans
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+
+
+import matplotlib.pyplot as plt
+
+
+import seaborn as sns
     
     </td>
     </tbody>
