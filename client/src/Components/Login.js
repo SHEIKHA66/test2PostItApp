@@ -210,7 +210,7 @@ const Login = () => {
 <p>print("\nTest Set Mean Squared Error (MSE):", mse)</p>
 <p>print("Test Set R-squared (R2):", r2)</p>
       
-<p>#knn::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;</p>
+<p>#knn:::::::::::::::::::::::::::::::::::::::::::::::::::::::</p>
    <p>   # Load the Iris dataset</p>
 <p>iris = datasets.load_iris()</p>
 <p># Create a DataFrame for the dataset</p>
@@ -218,7 +218,7 @@ const Login = () => {
 <p>iris_df['target'] = iris.target</p>
 <p># Simple train/test split of the dataset</p>
 <p>(iris_train_ftrs, iris_test_ftrs, iris_train_tgt, iris_test_tgt) = skms.train_test_split(iris.data, iris.target, test_size=.25)</p>
-<p># Print the shapes of the training and testing sets
+<p># Print the shapes of the training and testing sets</p>
 <p>print("Train features shape:", iris_train_ftrs.shape)</p>
 <p>print("Test features shape:", iris_test_ftrs.shape)</p>
 <p>knn = neighbors.KNeighborsClassifier(n_neighbors=3)</p>
