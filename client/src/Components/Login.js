@@ -105,6 +105,15 @@ const Login = () => {
 
 
 
+<p>model=KNeighborsClassifier(n_neighbors=7,metric='euclidean',weights='uniform' )</p>
+<p>model.fit(X_train, y_train)</p>
+
+<p>pred=model.predict(X_test)</p>
+
+<p>model=DecisionTreeClassifier(criterion='gini', splitter='random')</p>
+<p>model.fit(X_train, y_train)</p>
+
+<p>pred=model.predict(X_test)</p>
 
 
     </td>
