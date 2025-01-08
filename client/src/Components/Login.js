@@ -418,7 +418,7 @@ const Login = () => {
     <p>bootstrapped_accuracies.append(accuracy)</p>
 
 <p># Calculate and print the average accuracy</p>
-<p>print(f"Average Accuracy with Bootstrap Sampling: {np.mean(bootstrapped_accuracies):.2f}")</p>
+<p>print(f"Average Accuracy with Bootstrap Sampling: np.mean(bootstrapped_accuracies):.2f")</p>
 
 
   
