@@ -87,11 +87,7 @@ const Login = () => {
 <p>import SharePost from "./SharePost";</p>
 <p>import User from "./User";</p>
 <p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
-<p>jkhkhhjhj
-  klhukh
-    jhgfvhbjk
-      ""ljlkkj
-        </p>
+
  
 
 
