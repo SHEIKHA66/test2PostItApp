@@ -88,28 +88,28 @@ const Login = () => {
 <p>import User from "./User";</p>
 <p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
 
-<p>const Home = () => {</p>
+<p>const Home = () =علامة اصغر من او اكبرمن و علامة القوس مال كرلي براكت  {</p>
   <p>return (</p>
-    <p><></p>
-      <p><Row></p>
-        <p><Col md={3}></p>
-          <p><User /></p>
-        <p></Col></p>
+    <p>علامة اصغر من و اكبر من بثنينهم</p>
+      <p>Row</p>
+        <p>Col md={3}</p>
+          <p>User /</p>
+        <p>/Col</p>
 
-        <p><Col md={9}></p>
-          <p><SharePost /></p>
-        <p></Col></p>
-      <p></Row></p>
+        <p>Col md={9}</p>
+          <p>SharePost /</p>
+        <p>/Col</p>
+      <p>/Row</p>
 
-      <p><Row></p>
-        <p><Col md={3}></p>
-       <p> </Col></p>
+      <p>Row</p>
+        <p>Col md={3}</p>
+       <p> /Col</p>
 
-        <p><Col md={9}></p>
-          <p><Posts /></p>
-        <p></Col></p>
-      <p></Row></p>
-   <p> </></p>
+        <p>Col md={9}</p>
+          <p>Posts /</p>
+        <p>/Col</p>
+      <p>/Row</p>
+   <p> /</p>
   <p>);</p>
 <p>};</p>
 
