@@ -88,7 +88,9 @@ const Login = () => {
 <p>import User from "./User";</p>
 <p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
 
-<p>const Home  </p>
+const Home = () => {
+  return (
+
  
 
 
