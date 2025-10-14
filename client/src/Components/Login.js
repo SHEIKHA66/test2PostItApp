@@ -88,7 +88,7 @@ const Login = () => {
 <p>import User from "./User";</p>
 <p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
 
-<p>const Home = () =علامة اصغر من او اكبرمن و علامة القوس مال كرلي براكت  {</p>
+<p>const Home  </p>
  
 
 
