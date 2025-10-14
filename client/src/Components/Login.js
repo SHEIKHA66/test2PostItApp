@@ -68,6 +68,17 @@ const Login = () => {
 
     </tbody>
       <td>
+ <p>Imports</p>
+ <p>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force </p>
+  <p>npx create-react-app . </p>
+ <p>npm install</p>
+ <p> npm start</p>
+ <p>npm install reactstrap</p>
+ <p>npm install  bootstrap</p>
+ <p>npm install yup</p>
+ <p>npm install react-hook-form</p>
+ <p>npm install @hookform/resolvers</p>
+ <p>npm install @reduxjs/toolkit react-redux</p>
 
     
    <p> import pandas as pd</p>
