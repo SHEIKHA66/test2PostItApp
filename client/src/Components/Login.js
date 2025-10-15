@@ -11,7 +11,7 @@ npm install @hookform/resolvers
 npm install @reduxjs/toolkit react-redux
 
 
-Home.js
+----------------------------Home.js------------------------------------
 import logo from "../Images/logo-t.png";
 import Posts from "./Posts";
 import SharePost from "./SharePost";
@@ -46,7 +46,7 @@ const Home = () => {
 export default Home;
 
 
-Header.js
+--------------------------------------------------------------------------Header.js
 import { Navbar, NavItem, NavLink, Nav } from "reactstrap";
 import logo from "../Images/logo-t.png";
 import { Link } from "react-router-dom";
@@ -84,7 +84,7 @@ const Header = () => {
 export default Header;
 
 
-Login.js
+-------------------------------------------------------------Login.js
 //import log from "../Images/loginImage.jpg";
 import logo from "../Images/logo-t.png";
 
@@ -157,7 +157,7 @@ const Login = () => {
 export default Login;
 
 
-register.js
+---------------------------------------------------------------------------------register.js
 import { Button, Col, Row, Container, Form } from "reactstrap";
 
 import { userSchemaValidation } from "../Validations/UserValidations";
@@ -368,7 +368,7 @@ const Register = () => {
 export default Register;
 
 
-validation.js
+---------------------------------------------------------------------------------------validation.js
 import * as yup from "yup"; //import all exports from the yup
 
 export const userSchemaValidation = yup.object().shape({
@@ -415,7 +415,7 @@ export const userSchemaValidation = yup.object().shape({
 });
 
 
-App.js
+-----------------------------------------------------------------------------App.js
 import { Container, Row } from "reactstrap";
 import "./App.css";
 //import About from "./Components/About";
@@ -458,7 +458,7 @@ const App = () => {
 export default App;
 
 
-index.js
+---------------------------------------------------------------------------------index.js
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -476,7 +476,7 @@ root.render(
 );
 
 
-UserSlice.js
+---------------------------------------------------------------------------------UserSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import { UsersData } from "../Exampledata.js";
 
@@ -511,7 +511,7 @@ export const { addUser, deleteUser, updateUser } = userSlice.actions; //export t
 export default userSlice.reducer;
 
 
-Store.js
+-----------------------------------------------------------------------------Store.js
 import { configureStore } from "@reduxjs/toolkit";
 import usersReducer from "../Features/UserSlice.js";
 
@@ -536,7 +536,7 @@ const Footer = () => {
 export default Footer;
 
 
-Posts.js
+-----------------------------------------------------------------Posts.js
 
 const Posts = () => {
   return (
@@ -549,7 +549,7 @@ const Posts = () => {
 export default Posts;
 
 
-SharePosts.js
+----------------------------------------------------------------------------------------SharePosts.js
 import { Container, Row, Col, Input, Button } from "reactstrap";
 
 const SharePosts = () => {
@@ -573,7 +573,7 @@ const SharePosts = () => {
 export default SharePosts;
 
 
-user.js
+--------------------------------------------------------------------------------user.js
 import user from "../Images/user.png";
 const User = () => {
   return (
@@ -586,7 +586,7 @@ const User = () => {
 export default User;
 
 
-ExampleData
+---------------------------------------------------------------------------ExampleData
 export const UsersData = [
   {
     id: 1,
@@ -609,7 +609,7 @@ export const UsersData = [
 ];
 
 
-App.css
+----------------------------------------------------------------------------App.css
 .header {
   display: flex;
   align-items: center; /* Vertically align items */
@@ -891,7 +891,7 @@ export const UsersData = [
 ];
 
 
-Validation
+----------------------------------------------------------------------------------------Validation
 import * as yup from "yup"; //import all exports from the yup
 
 export const myUserSchemaValidation = yup.object().shape({
@@ -931,7 +931,7 @@ export const myUserSchemaValidation = yup.object().shape({
 });
 
 
-Emplist.js
+----------------------------------------------------------------------------------------------Emplist.js
 import { Button, Col, Row, Container, Form } from "reactstrap";
 import { useSelector, userDipatch } from "react-redux";
 import { empData } from "../EmployeeRecords";
