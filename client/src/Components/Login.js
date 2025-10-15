@@ -67,56 +67,7 @@ const Login = () => {
 
  <h1>كودات برمجية</h1>
     <p>يمكنك استخدام الكودات التالية في مشروع React الخاص بك:</p>
-    <div>
-        <code>
-Imports
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force 
-npx create-react-app . 
-npm install
-npm start
-npm install reactstrap
-npm install bootstrap
-npm install yup
-npm install react-hook-form
-npm install @hookform/resolvers
-npm install @reduxjs/toolkit react-redux
-        </code>
-    </div>
-
-    <div>
-        <code>
-Home.js
-import logo from "../Images/logo-t.png";
-import Posts from "./Posts";
-import SharePost from "./SharePost";
-import User from "./User";
-import { Container, Row, Col } from "reactstrap";
-
-const Home = () => {
-  return (
-    <>
-      <Row>
-        <Col md={3}>
-          <User />
-        </Col>
-        <Col md={9}>
-          <SharePost />
-        </Col>
-      </Row>
-      <Row>
-        <Col md={3}></Col>
-        <Col md={9}>
-          <Posts />
-        </Col>
-      </Row>
-    </>
-  );
-};
-
-export default Home;
-        </code>
-    </div>
-
+ 
 
 
 
