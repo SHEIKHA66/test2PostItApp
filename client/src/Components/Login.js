@@ -94,33 +94,34 @@ const Login = () => {
 <p>import SharePost from "./SharePost";</p>
 <p>import User from "./User";</p>
 <p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
+<h6>
+  const Home = () => {
+   return (
+     <>
+       <Row>
+         <Col md={3}>
+           <User />
+         </Col>
 
- <p> const Home = () => {</p>
-   <p>return (</p>
-     <p><></p>
-       <p><Row></p>
-         <p><Col md={3}></p>
-           <p><User /></p>
-         <p></Col></p>
+         <Col md={9}>
+           <SharePost />
+         </Col>
+       </Row>
 
-         <p><Col md={9}></p>
-           <p><SharePost /></p>
-         <p></Col></p>
-       <p></Row></p>
+       <Row>
+         <Col md={3}>
+         </Col>
 
-       <p><Row></p>
-         <p><Col md={3}></p>
-         <p></Col></p>
+         <Col md={9}>
+           <Posts />
+         </Col>
+       </Row>
+     </>
+   );
+ };
 
-         <p><Col md={9}></p>
-           <p><Posts /></p>
-         <p></Col></p>
-       <p></Row></p>
-     <p></></p>
-   <p>);</p>
- <p>};</p>
-
- <p>export default Home;</p>
+ export default Home;
+</h6>
 
 
 
