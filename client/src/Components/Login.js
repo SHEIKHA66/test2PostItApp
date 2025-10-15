@@ -67,7 +67,7 @@ const Login = () => {
 
  <h1>كودات برمجية</h1>
     <p>يمكنك استخدام الكودات التالية في مشروع React الخاص بك:</p>
-    <div class="code-block">
+    <div>
         <code>
 Imports
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force 
@@ -83,7 +83,7 @@ npm install @reduxjs/toolkit react-redux
         </code>
     </div>
 
-    <div class="code-block">
+    <div>
         <code>
 Home.js
 import logo from "../Images/logo-t.png";
