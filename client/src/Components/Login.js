@@ -56,51 +56,7 @@ const Login = () => {
           <Row>
             <Col>
     
-<Col md={3}>
-              <FormGroup>
-                <Label for="eMail">Email</Label>
-                <Input
-                  id="eMail"
-                  name="eMail"
-                  placeholder="Enter email..."
-                  type="email"
-                  onChange={(e) => setemail(e.target.value)}
-                />
-              </FormGroup>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label for="password">Password</Label>
-                <Input
-                  id="password"
-                  name="password"
-                  placeholder="Enter password..."
-                  type="password"
-                  onChange={(e) => setpassword(e.target.value)}
-                />
-              </FormGroup>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={3}>
-              <Button
-                color="primary"
-                className="button"
-                onClick={() => handleLogin()}
-              >
-                Login
-              </Button>
-              <p className="smalltext">
-                No Account? <Link to="/register">Sign Up</Link>
-              </p>
-            </Col>
-
-
-
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     </Col>
           </Row>
         </Form>
