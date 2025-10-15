@@ -65,10 +65,41 @@ const Login = () => {
 
 
 
- <h1>كودات برمجية</h1>
-    <p>يمكنك استخدام الكودات التالية في مشروع React الخاص بك:</p>
+<table>
+    
+    <thead></thead>
+
+    <tbody>
+    
+  
+
+    </tbody>
+      <td>
+ <p>Imports</p>
+ <p>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force </p>
+  <p>npx create-react-app . </p>
+ <p>npm install</p>
+ <p> npm start</p>
+ <p>npm install reactstrap</p>
+ <p>npm install  bootstrap</p>
+ <p>npm install yup</p>
+ <p>npm install react-hook-form</p>
+ <p>npm install @hookform/resolvers</p>
+ <p>npm install @reduxjs/toolkit react-redux</p>
+
+    
+------ Home----------
+ <p> import logo from "../Images/logo-t.png";</p>
+<p>import Posts from "./Posts";</p>
+<p>import SharePost from "./SharePost";</p>
+<p>import User from "./User";</p>
+<p>import { Container, Row, Col } from "reactstrap"; //import the Reactstrap Components</p>
+
  
 
+
+    </td>
+    </table>
 
 
 
