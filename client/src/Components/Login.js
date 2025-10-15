@@ -56,10 +56,10 @@ const Login = () => {
           <Row>
             <Col>
     
-<table>
-    <head></head>
 
-    <body>
+   
+
+    
     
 
 
@@ -132,7 +132,7 @@ const Login = () => {
 
 
 
-    </body>
+   
     </table>
     </Col>
           </Row>
